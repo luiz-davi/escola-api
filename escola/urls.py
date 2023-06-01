@@ -21,4 +21,7 @@ urlpatterns = [
 
     # libs
     path('auth/', include('rest_framework.urls')),
+
+    # local
+    path('api/v1/', include('curso.urls')),
 ]
