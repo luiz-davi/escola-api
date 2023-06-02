@@ -133,10 +133,10 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # DRF
 
 REST_FRAMEWORK = {
-    'DEFAUL_AUTHENTICATION_CLASSES': (
+    'DEFAUL_AUTHENTICATION_CLASSES': [
         'rest_framework.authentication.SessionAuthetication',
-    ),
-    'DEFAUL_PERMISSION_CLASSES': (
+    ],
+    'DEFAULT_PERMISSION_CLASSES': [
         'rest_framework.permissions.IsAuthenticatedOrReadOnly'
-    )
+    ]
 }
