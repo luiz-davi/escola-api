@@ -16,6 +16,8 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
+from curso.urls import router
+
 urlpatterns = [
     path('admin/', admin.site.urls),
 
@@ -24,4 +26,5 @@ urlpatterns = [
 
     # local
     path('api/v1/', include('curso.urls')),
+    path('api/v2/', include(router.urls)),
 ]
