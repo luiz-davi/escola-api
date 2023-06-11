@@ -8,6 +8,7 @@ https://docs.djangoproject.com/en/4.0/topics/settings/
 
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.0/ref/settings/
+
 """
 
 from pathlib import Path
@@ -41,6 +42,7 @@ INSTALLED_APPS = [
     # libs
     'django_filters',
     'rest_framework',
+    'rest_framework.authtoken',
 
     # local
     'curso',
@@ -134,7 +136,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [
-        'rest_framework.authentication.SessionAuthentication',
+        'rest_framework.authentication.TokenAuthentication',
+        # 'rest_framework.authentication.SessionAuthentication',
     ],
     'DEFAULT_PERMISSION_CLASSES': [
         'rest_framework.permissions.IsAuthenticatedOrReadOnly'
