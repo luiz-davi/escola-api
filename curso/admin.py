@@ -5,7 +5,7 @@ from .models import Curso, Avaliacao
 
 @admin.register(Curso)
 class CursoAdmin(admin.ModelAdmin):
-    list_display = ['titulo', 'url', 'criacao', 'atualizacao', 'ativo']
+    list_display = ['titulo', 'id', 'url', 'criacao', 'atualizacao', 'ativo']
 
 
 @admin.register(Avaliacao)
